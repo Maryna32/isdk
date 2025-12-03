@@ -1,8 +1,8 @@
 import { useState } from "react";
 
 export default function TalkBackClient() {
-  const talkbackId = "55903";
-  const apiKey = "AT8V1VN2IY1WJA2C";
+  const talkbackId = process.env.REACT_APP_TALKBACKID;
+  const apiKey = process.env.REACT_APP_APIKEY;
   const [status, setStatus] = useState({ message: "", type: "" });
   const [loading, setLoading] = useState(false);
 
